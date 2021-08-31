@@ -38,42 +38,51 @@ int main()
 
     cin.clear();
   cin.ignore(INT_MAX,'\n'); 
-*/
+
   string str4 {"Enter one integer and one real number: "};
-  cout << str4;
+  cout << str4 << endl;
   int n5{};
   cin >> n5;
   double n6{};
   cin >> n6;
   string str5 {"The real is: "};
-  cout  <<  str5 << setfill (' ') << setw(10);
-  // printf(str5 "%.3f", n6);
-  cout << endl;
+  cout  <<  str5;
+    //<< setfill (' ') << setw(11);
+    //printf("%*s%3f", 3, "", n6);
+    printf("%11.3f", n6);
+
+    cout << endl;
   string str6 {"The integer is: "};
   cout <<  str6;
   cout <<  setfill(' ') << setw(8) << n5;
   cout << endl;
 
-    cin.clear();
+  cin.clear();
   cin.ignore(INT_MAX,'\n');
-}
-/*
-  string str7 {"Enter one real and one integer number: "};
-  cout << str7;
-  cin >> n6;
-  cin >> n5;
-  string str8 {"The real is: ......"};
-  cout <<  str8;
-  printf("%.3f", n6);
-  cout << endl;
-  string str9 {"The integer is: ...."};
-  cout << str9;
-  cout << n5;
-  cout << endl;
 
+  /*/
+  string str123 {"Enter one real and one integer number: "};
+  double  n11;
+  int  n12;
+  cout << str123;
+  //cin >> n11;
+  // cin >> n12;
+  cout << endl;
+  n11 = 2.71828183;
+  n12 = 1392;
+  string str8 {"The real is: "};
+  cout <<  str8;
+  printf("%11.3f", n11);
+  //printf("%11.3f", n11);
+  cout << endl;
+  string str9 {"The integer is: "};
+  cout << str9;
+  cout <<  setfill('.') << setw(8) << n12;
+  cout << endl;
+ 
     cin.clear();
   cin.ignore(INT_MAX,'\n'); 
-  
+
  string chartest{"Enter a character: "};
   cout << chartest;
   char ctest{};
@@ -83,7 +92,7 @@ int main()
 
     cin.clear();
   cin.ignore(INT_MAX,'\n'); 
-
+  /*
 
     string word {"Enter a word: "};
     cout << word;
@@ -154,6 +163,5 @@ int main()
   cin.clear();
   cin.ignore(INT_MAX,'\n'); 
   
+*/
 }
-
-*/ 
