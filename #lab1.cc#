@@ -74,8 +74,7 @@ int main()
   cout << ("You entered the string ") << '"' << word << '"' << (" and the character '") << Qgarden<< ("'.") << endl ;
   cin.clear();
   cin.ignore(INT_MAX,'\n');
-*/
-  
+
   cout << ("Enter a word and real number: ");
   cin >> word >> decimal;
   cout << ("You entered ") << '"' << word << '"' << (" and ") << '"';
@@ -84,7 +83,6 @@ int main()
   return 0;
   cin.clear();
   cin.ignore(INT_MAX,'\n'); 
-  /*
   cout << ("Enter a text-line: ");
   getline(cin, word);
   cout << ("You entered ") << '"' << word << '"' << endl;
@@ -103,5 +101,4 @@ int main()
   cin.clear();
   cin.ignore(INT_MAX,'\n'); 
  
-  */
 }
