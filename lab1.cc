@@ -11,7 +11,7 @@ int main()
   double decimal{};
   string word{};
   char Qgarden{};
-  /* 
+  
   cout << ("Enter one integer: ");
   cin >> integer;
   cout << ("You entered the number: ") << integer << endl;
@@ -74,24 +74,20 @@ int main()
   cout << ("You entered the string ") << '"' << word << '"' << (" and the character '") << Qgarden<< ("'.") << endl ;
   cin.clear();
   cin.ignore(INT_MAX,'\n');
-*/
   
   cout << ("Enter a word and real number: ");
   cin >> word >> decimal;
   cout << ("You entered ") << '"' << word << '"' << (" and ") << '"';
-
-  std::cout << std::setprecision(5) << left << setfill ('0') << setw(6) << decimal << '"'<< "." << endl;
-  return 0;
+  std::cout << std::setprecision(4) << left << setfill ('0') << setw(6) << decimal << '"'<< "." << endl;
   cin.clear();
   cin.ignore(INT_MAX,'\n'); 
-  /*
   cout << ("Enter a text-line: ");
   getline(cin, word);
-  cout << ("You entered ") << '"' << word << '"' << endl;
-
+  cout << ("You entered: ") << '"' << word << '"' << endl;
+  
   cout << ("Enter a second line of text: ");
   getline(cin, word);
-  cout << ("You entered ") << '"' << word << '"' << endl;
+  cout << ("You entered: ") << '"' << word << '"' << endl;
 
   cout << ("Enter three words: ");
   cin >> word;
@@ -102,6 +98,5 @@ int main()
   cout << word << flush << ( "'") <<endl;
   cin.clear();
   cin.ignore(INT_MAX,'\n'); 
- 
-  */
+  
 }
