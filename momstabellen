@@ -1,0 +1,81 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <climits>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+  float first{};
+  double last{};
+  double stride{};
+  double tax{};
+  
+  cout << ("INPUT PART") << endl;
+  std::cout << std::setfill('=') << std::setw(11) << "\n";
+  cout << ("Enter first price: ");
+  cin >> first;
+  if (first < 0){ 
+    do {
+      cout << ("ERROR: First price must be at least 0 (zero SEK): ");	
+      cin >> first;
+    }
+    while (first < 0);
+  }
+	  
+  cout << ("Enter last price : ");
+  cin >> last;
+  if (last <= first) {
+    do {
+      cout << ("ERROR: Your last price must be bigger than your first: ");
+      cin >> last;
+    }
+    while (last < first);
+  }
+  cout << ("Enter stride     : ");
+  cin >> stride;
+
+  if (stride < 0.01 || stride > last-first) {
+    do {
+      if (stride < 0.01) {
+	cout << ("ERROR: Your stride has to be bigger than 0.01: ");
+	cin >> stride;
+      }
+      else {
+	cout << ("ERROR: Your stride can't be bigger than the difference between your last and first: ");
+	cin >> stride;
+      }
+    }
+    while (stride < 0.01 || stride > last-first);
+  }
+  
+  cout << ("Enter tax percent: ");
+  cin >> tax;
+  if (tax < 0 || tax > 100){
+    do {
+      cout << ("ERROR: The tax needs to be between 0-100:  ");	
+      cin >> tax;
+    }
+    while (tax < 0 || tax > 100);
+  }
+  tax = tax/100;
+
+  cout << endl;
+  cout << ("TAX TABLE") << endl;
+  std::cout << std::setfill('=') << std::setw(10) << "\n";
+  std::cout << std::setfill(' ') << setw(12) << ("Price");
+  std::cout << setw(17) << ("Tax");
+  std::cout << std::setw(20) << ("Price with tax") << endl;
+  std::cout << std::setfill('-') << std::setw(50) << "\n";
+
+  do {
+    std::cout << std::setfill(' ') << setw(12) << fixed
+	      << std::setprecision(2) << first;
+    std::cout << setfill (' ') << setw(17) << fixed << std::setprecision(2) << first*tax;
+    std::cout << setw(20) << fixed << std::setprecision(2) << tax*first+first << "\n";
+    first = first+stride;
+  }
+  while (first <= last);
+
+}
